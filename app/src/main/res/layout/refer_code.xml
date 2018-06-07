@@ -1,0 +1,279 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_acco"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                app:cardBackgroundColor="@color/coloWhite"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivReferIMG"
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:layout_margin="10dp"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/adve" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <com.washonwheel.android.UI.MyTextView
+                                android:id="@+id/tvMessage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Invite your friend to WashOnWheel"
+                                android:textColor="@color/coloPrimaryText"
+                                android:textSize="15dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.washonwheel.android.UI.MyTextView
+                                    android:id="@+id/tvYouGet"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="and Earn referral bonus of "
+                                    android:textColor="@color/Black"
+                                    android:textSize="14dp" />
+
+
+                            </LinearLayout>
+
+                            <com.washonwheel.android.UI.MyTextView
+                                android:id="@+id/tvFrdGet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text=" Your friend also earn of \u20B950 "
+                                android:textColor="@color/Black"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorGray">
+
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgReferfriend"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <LinearLayout
+                                android:id="@+id/sharewp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.5"
+                                android:orientation="vertical"
+                                android:weightSum="10">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_whatsapp" />
+
+                                <com.washonwheel.android.UI.MyTextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="WhatsApp"
+                                    android:textColor="#9da0a7"
+                                    android:textSize="14dp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/sharefb"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.5"
+                                android:orientation="vertical"
+                                android:weightSum="10">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/fb_final" />
+
+                                <com.washonwheel.android.UI.MyTextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="Facebook"
+                                    android:textColor="#9da0a7"
+                                    android:textSize="14dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/sharemail"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.5"
+                                android:orientation="vertical"
+                                android:weightSum="10">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_gmail" />
+
+                                <com.washonwheel.android.UI.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="Mail"
+                                    android:textColor="#9da0a7"
+                                    android:textSize="14dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/sharmore"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.4"
+                                android:orientation="vertical"
+                                android:weightSum="10">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_menu" />
+
+                                <com.washonwheel.android.UI.MyTextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="More"
+                                    android:textColor="#9da0a7"
+                                    android:textSize="14dp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/colorGray">
+                        </View>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.washonwheel.android.UI.MyTextView
+                                android:id="@+id/tvReferCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorGray"
+                                android:gravity="center"
+                                android:padding="7dp"
+                                android:text="24IN07"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnCopy"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimary"
+                                android:text="Copy code to clipboard"
+                                android:textAllCaps="false"
+                                android:textColor="@color/coloWhite"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

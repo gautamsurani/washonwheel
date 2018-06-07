@@ -1,0 +1,477 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/bg_acco"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                app:cardBackgroundColor="@color/coloWhite"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/rgPayType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <RadioButton
+                                android:id="@+id/rbCOD"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="Cash On Delivery"
+                                android:textColor="@color/Black"
+                                android:visibility="gone" />
+
+                            <RadioButton
+                                android:id="@+id/rbOnline"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Online Payment"
+                                android:textColor="@color/Black"
+                                android:visibility="gone" />
+
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGray"></View>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ll_coupon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:paddingTop="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Have a coupon code ?"
+                                    android:textColor="@color/colorPrimary" />
+
+                                <ImageView
+                                    android:id="@+id/imgOpen"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:gravity="center_vertical"
+                                    android:src="@drawable/ic_more" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/view_coupon_main"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ll_coupon"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/view_coupon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <LinearLayout
+                                        android:id="@+id/llApplyView"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:visibility="visible">
+
+                                        <EditText
+                                            android:id="@+id/etCoupon"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginRight="10dp"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_gray"
+                                            android:inputType="text"
+                                            android:textSize="14sp" />
+
+                                        <Button
+                                            android:id="@+id/btnApply"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:text="Apply"
+                                            android:textColor="@color/coloWhite"
+                                            android:textSize="13sp" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llCouponText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tvCouponText"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="15dp"
+                                        android:text="bjhdbv"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/btnClear1"
+                                        style="@style/Base.Widget.AppCompat.Button.Colored"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:text="Clear"
+                                        android:textAllCaps="false"
+                                        android:textSize="11sp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_mem_coupon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:paddingTop="5dp"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Apply Membership Card Coupons"
+                                    android:textColor="@color/colorPrimary" />
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:gravity="center_vertical"
+                                    android:src="@drawable/ic_more" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ll_coupon"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/view_mem_coupon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/tvCouponMsg"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="15dp"
+                                        android:text="bjhdbv"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/btnClear"
+                                        style="@style/Base.Widget.AppCompat.Button.Colored"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:text="Clear"
+                                        android:textAllCaps="false"
+                                        android:textSize="11sp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/view_coupon_main"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:id="@+id/view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@+id/ll_coupon"
+                                    android:background="@color/colorGray" />
+
+                                <LinearLayout
+                                    android:id="@+id/ll_wallet"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:padding="15dp"
+                                    android:tag="f"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:layout_width="22dp"
+                                        android:layout_height="25dp"
+                                        android:gravity="center_vertical"
+                                        android:src="@drawable/walllet_balck" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:drawablePadding="5dp"
+                                        android:gravity="center_vertical"
+                                        android:text="WOW Wallet "
+                                        android:textColor="@color/Black"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:id="@+id/tvWallet"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_weight="1"
+                                        android:drawablePadding="5dp"
+                                        android:gravity="center_vertical"
+                                        android:text="\u20B950.00"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="15dp" />
+
+                                    <CheckBox
+                                        android:id="@+id/chk_wallet"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:button="@drawable/checkbox_back"
+                                        android:gravity="center_vertical" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@+id/ll_wallet"
+                                    android:background="@color/colorGray"></View>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:padding="15dp"
+                                    android:text="Billing Summery"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="15dp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/colorGray"></View>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:padding="15dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Total Amount"
+                                        android:textColor="@color/Black" />
+
+                                    <TextView
+                                        android:id="@+id/tvAmount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:gravity="center_vertical"
+                                        android:text="\u20B9400.00"
+                                        android:textColor="@color/Black"
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-10dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:padding="15dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Discount"
+                                        android:textColor="@color/Black" />
+
+                                    <TextView
+                                        android:id="@+id/tvDiscount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:gravity="center_vertical"
+                                        android:text="\u20B90.00"
+                                        android:textColor="@color/Black"
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-10dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:padding="15dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Wow Wallet"
+                                        android:textColor="@color/Black" />
+
+                                    <TextView
+                                        android:id="@+id/tvWowAmount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:gravity="center_vertical"
+                                        android:text="\u20B90.00"
+                                        android:textColor="@color/Black"
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/colorGray"></View>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-5dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:padding="15dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical"
+                                        android:text="Grand Total"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:id="@+id/tvGrandTotal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:gravity="center_vertical"
+                                        android:text="\u20B90.00"
+                                        android:textColor="@color/Black"
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <com.washonwheel.android.UI.MyTextView
+                                    android:id="@+id/btnPaynow"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginLeft="25dp"
+                                    android:layout_marginRight="25dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@color/colorPrimary"
+                                    android:gravity="center"
+                                    android:text="Book Service"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/coloWhite"
+                                    android:textSize="17dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
